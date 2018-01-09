@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pruebas</title>
+</head>
+<body>
+    <style>*{padding:0;margin:0}</style>
+    <script src="./pixi.min.js"></script>
+    <script src="./scaleToWindow.js"></script>
+    <script>
+    let renderer = PIXI.autoDetectRenderer(256,256);
+    document.body.appendChild(renderer.view);
+    let stage = new PIXI.Container();
+    renderer.render(stage);
+    let scale = scaleToWindow(renderer.view,"green");
+    console.log(scale);
+    </script>
+</body>
+</html>

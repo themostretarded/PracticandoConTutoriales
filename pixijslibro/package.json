@@ -1,0 +1,11 @@
+{
+  "name": "tutorialpixi",
+  "version": "1.0.0",
+  "description": "Todo los juegos que haga con pixi o phaser tambien",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "meer",
+  "license": "ISC"
+}

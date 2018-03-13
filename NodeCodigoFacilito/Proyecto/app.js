@@ -24,16 +24,32 @@ app.get("/login", function (req, res) {
 });
 
 app.post("/user", function (req, res) {
+    
     var user = new User({
         email: req.body.correo,
-        password: req.body.password
+        password: req.body.password,
+        password_confirmation: req.body.password_confirmation,
+        username: req.body.username
     });
+    console.log(user.password_confirmation);
 
-    user.save(function () {
+    user.save(function (err) {
+        if(err){
+            console.log(String(err));
+        }
         res.send("Ya se guardo los datos");
     });
 
-})
+    user.save().then(function(us){
+        res.send("guardamos el usuario exitosamente");
+         },function(err){
+             if(err){
+                 console.log(String(err));
+                 res.send("no pudimos guardar la informacion");
+             }
+         });
+
+});
 
 app.listen(3000);
 console.log("Corriendo");

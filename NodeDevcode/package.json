@@ -1,0 +1,10 @@
+{
+  "name": "aplicacionprueba",
+  "description": "nunca vere la luz",
+  "autor": "yo merengues",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {}
+}

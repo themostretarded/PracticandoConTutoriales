@@ -3,7 +3,7 @@ var homeController = function(server){
 
     server.route('/')
     .get(function(req,res){
-        res.send('hola mundo');
+        res.render('home/index');
     });
 };
 
